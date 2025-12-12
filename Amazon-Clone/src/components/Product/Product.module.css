@@ -53,6 +53,30 @@
   margin: 0 auto;
 }
 
+.product__flexed{
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  height: auto;
+  box-shadow: none;
+}
+ .card__container.product__flexed {
+  max-width: none;
+   width: 80vw;   
+}
+.product__flexed h3{
+  padding: 1rem 0 ;
+}
+.product__flexed button{
+  display: block;
+  position: static;
+  width: 10rem;
+}
+.product__flexed .imgBox{
+width: 30vw;
+height: auto;
+}
+
 @media (max-width: 1200px) {
   .products__container {
     grid-template-columns: repeat(4, 1fr);
@@ -68,6 +92,10 @@
 @media (max-width: 768px) {
   .products__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .product__flexed {
+    display: flex;
+    flex-direction: column;
   }
 }
 

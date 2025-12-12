@@ -6,7 +6,6 @@ import ProductCard from "../../components/Product/ProductCard";
 import Loader from "../../components/Loader/Loader";
 
 function ProductDetail() {
-
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -29,10 +28,15 @@ function ProductDetail() {
 
   return (
     <>
- 
-   {(isLoading) ? (<Loader/>) :  (product && <ProductCard product={product} />)
-  } 
-   </>
-   )}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        product && (
+          <ProductCard product={product} flex={true} renderDesc={true} />
+        )
+      )}
+    </>
+  );
+}
 
 export default ProductDetail;
