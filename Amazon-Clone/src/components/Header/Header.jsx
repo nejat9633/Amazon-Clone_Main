@@ -5,6 +5,7 @@ import flag from "../../assets/download.png";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuShoppingCart } from "react-icons/lu";
 import LowerHeader from "./LowerHeader";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -12,12 +13,12 @@ function Header() {
       <div className={style.header__container}>
         <div className={style.logo__container}>
           {/* amazon logo */}
-          <a href="">
+          <Link to="/">
             <img
               src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
               alt="Amazon logo"
             />
-          </a>
+          </Link>
           <div className={style.delivery}>
             {/* deliver to */}
             <span>
@@ -50,24 +51,24 @@ function Header() {
           </a>
 
           {/* sign in and account */}
-          <a href="" className={style.account}>
+          <Link to="/signup" className={style.account}>
             <div>
               <p>Sign In</p>
               <span>Account & Lists</span>
             </div>
-          </a>
+          </Link>
           {/* returns and order */}
-          <a href="" className={style.orders}>
+          <Link to="/orders" className={style.orders}>
             <div>
               <p>Returns</p>
               <span>& Orders</span>
             </div>
-          </a>
+          </Link>
           {/* cart */}
-          <a href="" className={style.cart}>
+          <Link to="/cart" className={style.cart}>
             <LuShoppingCart size={25} />
             <span>0</span>
-          </a>
+          </Link>
         </div>
       </div>
       <LowerHeader />
