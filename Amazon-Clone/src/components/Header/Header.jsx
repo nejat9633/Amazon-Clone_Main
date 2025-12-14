@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import style from "./Header.module.css";
 import { FaSearch } from "react-icons/fa";
 import flag from "../../assets/download.png";
@@ -6,10 +6,14 @@ import { IoLocationOutline } from "react-icons/io5";
 import { LuShoppingCart } from "react-icons/lu";
 import LowerHeader from "./LowerHeader";
 import { Link } from "react-router-dom";
+import { DataContext } from "../DataProvider/DataProvider";
 
 function Header() {
+
+  const [{cart},initialState] = useContext(DataContext)
+
   return (
-    <div>
+    <div className={style.fixed}>
       <div className={style.header__container}>
         <div className={style.logo__container}>
           {/* amazon logo */}
@@ -67,7 +71,7 @@ function Header() {
           {/* cart */}
           <Link to="/cart" className={style.cart}>
             <LuShoppingCart size={25} />
-            <span>0</span>
+            <span>{cart.length}</span>
           </Link>
         </div>
       </div>
