@@ -38,7 +38,7 @@ function Result() {
         ) : (
           <div className={style.products__container}>
             {results?.map((result, index) => {
-              return <ProductCard product={result} key={index} />;
+              return <ProductCard product={result} key={index} renderAdd={true} />;
             })}
           </div>
         )}

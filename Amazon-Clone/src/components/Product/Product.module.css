@@ -1,9 +1,10 @@
 .card__container {
-  width: 100%;
+  width: auto;
   max-width: 250px;
   box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
   position: relative;
   padding: 0.3rem;
+   margin: 2rem 0;
 }
 .card__container button {
   display: none;
@@ -56,13 +57,13 @@
 .product__flexed{
   display: flex;
   gap: 3rem;
-  width: 100%;
+  flex: 1;
+  max-width: 100%;
   height: auto;
   box-shadow: none;
 }
  .card__container.product__flexed {
-  max-width: none;
-   width: 80vw;   
+  max-width: 80vw;
 }
 .product__flexed h3{
   padding: 1rem 0 ;

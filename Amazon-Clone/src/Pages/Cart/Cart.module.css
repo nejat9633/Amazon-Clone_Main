@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.inner__container {
+  display: flex;
+  width: 90%;
+  gap: 1.5rem;
+}
+.container section {
+  width: 200px !important;
+}
+.cart__container {
+  padding: 0 0.7rem;
+  flex: 3;
+}
+.cart__container h2,
+.cart__container h3 {
+  padding: 0.4rem;
+}
+.cart__container hr {
+  margin: 0.7rem;
+}
+.subtotal {
+  flex: 1;
+  border: 1px solid rgb(193, 193, 193);
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: rgb(242, 241, 241);
+  margin: 1rem;
+  min-width: 300px;
+  height: 28vh;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: sticky;
+    top: 20vh;
+}
+.total {
+  display: flex;
+  gap: 1rem;
+}
+.box {
+  display: flex;
+  gap: 10px;
+}
+.button {
+  background-color: var(--primary-color);
+  padding: 0.4rem 3rem;
+  color: black;
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: var(--primary-shade);
+}
+
+.cart_product {
+  display: flex;
+  gap: 1.5rem;
+}
+.btn__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+.btn__container button {
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+}
+
+@media screen and (max-width: 968px) {
+  .inner__container {
+    flex-direction: column;
+    /* align-items: center; */
+    order: 1;
+  }
+}

@@ -11,6 +11,9 @@ import { DataContext } from "../DataProvider/DataProvider";
 function Header() {
 
   const [{cart},initialState] = useContext(DataContext)
+  const totalItem = cart?.reduce((amount,item)=>{
+    return item.amount + amount
+  },0)
 
   return (
     <div className={style.fixed}>
@@ -71,7 +74,7 @@ function Header() {
           {/* cart */}
           <Link to="/cart" className={style.cart}>
             <LuShoppingCart size={25} />
-            <span>{cart.length}</span>
+            <span>{totalItem}</span>
           </Link>
         </div>
       </div>

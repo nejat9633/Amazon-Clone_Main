@@ -32,7 +32,12 @@ function ProductDetail() {
         <Loader />
       ) : (
         product && (
-          <ProductCard product={product} flex={true} renderDesc={true} />
+          <ProductCard
+            product={product}
+            renderAdd={true}
+            flex={true}
+            renderDesc={true}
+          />
         )
       )}
     </>

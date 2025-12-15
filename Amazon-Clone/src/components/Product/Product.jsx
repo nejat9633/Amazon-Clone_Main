@@ -30,7 +30,9 @@ function Product() {
       ) : (
         <div className={style.products__container}>
           {products?.map((product, index) => {
-            return <ProductCard product={product} key={index} />;
+            return (
+              <ProductCard renderAdd={true} product={product} key={index} />
+            );
           })}
         </div>
       )}
