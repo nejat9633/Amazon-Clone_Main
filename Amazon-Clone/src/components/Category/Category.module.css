@@ -39,3 +39,10 @@
   position: relative;
   margin-top: -15%;
 }
+
+@media screen and (max-width:992px) {
+
+  .category__container{
+       grid-template-columns: repeat(2, 1fr);
+  }
+}
