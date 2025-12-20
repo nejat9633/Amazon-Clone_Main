@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import style from "./Header.module.css";
 import { FaSearch } from "react-icons/fa";
 import flag from "../../assets/download.png";
@@ -11,7 +11,10 @@ import {auth} from '../../Utils/firebase'
 
 function Header() {
 
-  const [{user, cart},initialState] = useContext(DataContext)
+
+ const [{user, cart},initialState] = useContext(DataContext)
+
+
   
   const totalItem = cart?.reduce((amount,item)=>{
     return item.amount + amount
