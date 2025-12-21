@@ -11,7 +11,7 @@ import SharedLayout from "./SharedLayout";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
-import NotFound from "../NotFound";
+import NotFound from "../NotFound/NotFound";
 
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_KEY);
