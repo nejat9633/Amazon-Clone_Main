@@ -7,29 +7,6 @@ export const DataContext = createContext();
 
 function DataProvider({ children, reducer, initialState }) 
 {
-
-  const [state, dispatch] = useReducer(reducer, {
-    ...initialState,
-    authLoading: true,
-  });
-  useEffect(()=>{
-    const unsubscribe = onAuthStateChanged(auth,(currentUser)=>{
-      dispatch({
-        type:Type.SET_USER,
-        user: currentUser,
-      })
-
-      dispatch({
-        type:Type.SET_AUTH_LOADING,
-        authLoading: false,
-      })
-    })
-
-    return unsubscribe;
-  },[])
-
-
-
   return (
     <DataContext.Provider value={useReducer(reducer,initialState)}>{children}</DataContext.Provider>
   );

@@ -57,11 +57,6 @@ export const reducer = (state, action) => {
         ...state,
         user: action.user,
       };
-    case Type.SET_AUTH_LOADING:
-      return {
-        ...state,
-        authLoading: action.authLoading,
-      };
 
     default:
       return state;

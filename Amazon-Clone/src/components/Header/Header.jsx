@@ -8,10 +8,11 @@ import LowerHeader from "./LowerHeader";
 import { Link } from "react-router-dom";
 import { DataContext } from "../DataProvider/DataProvider";
 import {auth} from '../../Utils/firebase'
+import { ClipLoader } from "react-spinners";
 
 function Header() {
-  const [{ user, cart, authLoading }, dispatch] = useContext(DataContext);
-  if (authLoading) return null; 
+  const [{ user, cart }, initialState] = useContext(DataContext);
+
 
   const totalItem = cart?.reduce((amount, item) => {
     return item.amount + amount;
@@ -23,6 +24,15 @@ function Header() {
       auth.signOut();
     }
   };
+  // {
+  //   showConfirm && (
+  //     <ConfirmModal
+  //       title="Sign out?"
+  //       onConfirm={handleSignOut}
+  //       onCancel={() => setShowConfirm(false)}
+  //     />
+  //   );
+  // }
 
   return (
     <div className={style.fixed}>
@@ -67,7 +77,7 @@ function Header() {
           </a>
 
           {/* sign in and account */}
-          <Link to={user? "#" : "/signup"} className={style.account}>
+          <Link to={!user && "/signup"} className={style.account}>
             <div>
               {user ? (
                 <>
