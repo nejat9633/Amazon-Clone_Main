@@ -1,5 +1,5 @@
 [build]
-  base = "Amazon-Clone"                       # where your frontend code is
+  base = "Amazon-Clone_Main"                       # where your frontend code is
   publish = "Amazon-Clone/dist"               # output folder after `npm run build`
   functions = "/netlify/functions"  # folder for Netlify serverless functions
   command = "npm run build"
